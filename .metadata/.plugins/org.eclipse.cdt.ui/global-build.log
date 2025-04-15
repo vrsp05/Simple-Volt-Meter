@@ -1,0 +1,278 @@
+13:27:28 **** Incremental Build of configuration Debug for project Final_Project_ ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:824:57: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  824 |             HAL_UART_Transmit(&huart2, response, strlen(response), UART_DELAY);
+      |                                                         ^~~~~~~~
+      |                                                         |
+      |                                                         uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:24:
+C:\ST\STM32CubeIDE_1.17.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "Final_Project_.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\victo\STM32CubeIDE\workspace_1.17.0\Final_Project\Final_Project_\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final_Project_.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final_Project_.elf
+ 
+arm-none-eabi-size  Final_Project_.elf 
+arm-none-eabi-objdump -h -S Final_Project_.elf  > "Final_Project_.list"
+   text	   data	    bss	    dec	    hex	filename
+  50860	    484	   2516	  53860	   d264	Final_Project_.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final_Project_.list
+ 
+13:27:33 **** Incremental Build of configuration Debug for project Final_Project_ ****
+make -j4 all 
+arm-none-eabi-size  Final_Project_.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50860	    484	   2516	  53860	   d264	Final_Project_.elf
+Finished building: default.size.stdout
+ 
+13:28:21 **** Incremental Build of configuration Debug for project Final_Project_ ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:824:57: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  824 |             HAL_UART_Transmit(&huart2, response, strlen(response), UART_DELAY);
+      |                                                         ^~~~~~~~
+      |                                                         |
+      |                                                         uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:24:
+C:\ST\STM32CubeIDE_1.17.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "Final_Project_.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\victo\STM32CubeIDE\workspace_1.17.0\Final_Project\Final_Project_\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final_Project_.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final_Project_.elf
+ 
+arm-none-eabi-size  Final_Project_.elf 
+arm-none-eabi-objdump -h -S Final_Project_.elf  > "Final_Project_.list"
+   text	   data	    bss	    dec	    hex	filename
+  50868	    484	   2516	  53868	   d26c	Final_Project_.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final_Project_.list
+ 
+20:31:54 **** Incremental Build of configuration Debug for project Final_Project_ ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:830:57: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  830 |             HAL_UART_Transmit(&huart2, response, strlen(response), UART_DELAY);
+      |                                                         ^~~~~~~~
+      |                                                         |
+      |                                                         uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:24:
+C:\ST\STM32CubeIDE_1.17.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "Final_Project_.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\victo\STM32CubeIDE\workspace_1.17.0\Final_Project\Final_Project_\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final_Project_.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final_Project_.elf
+ 
+arm-none-eabi-size  Final_Project_.elf 
+arm-none-eabi-objdump -h -S Final_Project_.elf  > "Final_Project_.list"
+   text	   data	    bss	    dec	    hex	filename
+  50892	    484	   2516	  53892	   d284	Final_Project_.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final_Project_.list
+ 
+20:51:07 **** Incremental Build of configuration Debug for project Final_Project_ ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:858:57: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  858 |             HAL_UART_Transmit(&huart2, response, strlen(response), UART_DELAY);
+      |                                                         ^~~~~~~~
+      |                                                         |
+      |                                                         uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:24:
+C:\ST\STM32CubeIDE_1.17.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "Final_Project_.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\victo\STM32CubeIDE\workspace_1.17.0\Final_Project\Final_Project_\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final_Project_.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final_Project_.elf
+ 
+arm-none-eabi-size  Final_Project_.elf 
+arm-none-eabi-objdump -h -S Final_Project_.elf  > "Final_Project_.list"
+   text	   data	    bss	    dec	    hex	filename
+  51036	    484	   2516	  54036	   d314	Final_Project_.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final_Project_.list
+ 
+20:55:35 **** Incremental Build of configuration Debug for project Final_Project_ ****
+make -j4 all 
+arm-none-eabi-size  Final_Project_.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51036	    484	   2516	  54036	   d314	Final_Project_.elf
+Finished building: default.size.stdout
+ 
+20:58:30 **** Incremental Build of configuration Debug for project Final_Project_ ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:860:57: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  860 |             HAL_UART_Transmit(&huart2, response, strlen(response), UART_DELAY);
+      |                                                         ^~~~~~~~
+      |                                                         |
+      |                                                         uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:24:
+C:\ST\STM32CubeIDE_1.17.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "Final_Project_.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\victo\STM32CubeIDE\workspace_1.17.0\Final_Project\Final_Project_\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final_Project_.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final_Project_.elf
+ 
+arm-none-eabi-size  Final_Project_.elf 
+arm-none-eabi-objdump -h -S Final_Project_.elf  > "Final_Project_.list"
+   text	   data	    bss	    dec	    hex	filename
+  51036	    484	   2516	  54036	   d314	Final_Project_.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final_Project_.list
+ 
+21:04:17 **** Incremental Build of configuration Debug for project Final_Project_ ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:879:57: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  879 |             HAL_UART_Transmit(&huart2, response, strlen(response), UART_DELAY);
+      |                                                         ^~~~~~~~
+      |                                                         |
+      |                                                         uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:24:
+C:\ST\STM32CubeIDE_1.17.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "Final_Project_.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\victo\STM32CubeIDE\workspace_1.17.0\Final_Project\Final_Project_\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final_Project_.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final_Project_.elf
+ 
+arm-none-eabi-size  Final_Project_.elf 
+arm-none-eabi-objdump -h -S Final_Project_.elf  > "Final_Project_.list"
+   text	   data	    bss	    dec	    hex	filename
+  51092	    484	   2524	  54100	   d354	Final_Project_.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final_Project_.list
+ 
+21:06:18 **** Incremental Build of configuration Debug for project Final_Project_ ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:882:57: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  882 |             HAL_UART_Transmit(&huart2, response, strlen(response), UART_DELAY);
+      |                                                         ^~~~~~~~
+      |                                                         |
+      |                                                         uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:24:
+C:\ST\STM32CubeIDE_1.17.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "Final_Project_.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\victo\STM32CubeIDE\workspace_1.17.0\Final_Project\Final_Project_\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final_Project_.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final_Project_.elf
+ 
+arm-none-eabi-size  Final_Project_.elf 
+arm-none-eabi-objdump -h -S Final_Project_.elf  > "Final_Project_.list"
+   text	   data	    bss	    dec	    hex	filename
+  51140	    484	   2524	  54148	   d384	Final_Project_.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final_Project_.list
+ 
+21:07:14 **** Incremental Build of configuration Debug for project Final_Project_ ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:882:57: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  882 |             HAL_UART_Transmit(&huart2, response, strlen(response), UART_DELAY);
+      |                                                         ^~~~~~~~
+      |                                                         |
+      |                                                         uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:24:
+C:\ST\STM32CubeIDE_1.17.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "Final_Project_.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\victo\STM32CubeIDE\workspace_1.17.0\Final_Project\Final_Project_\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final_Project_.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final_Project_.elf
+ 
+arm-none-eabi-size  Final_Project_.elf 
+arm-none-eabi-objdump -h -S Final_Project_.elf  > "Final_Project_.list"
+   text	   data	    bss	    dec	    hex	filename
+  51140	    484	   2524	  54148	   d384	Final_Project_.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final_Project_.list
+ 
+21:10:42 **** Incremental Build of configuration Debug for project Final_Project_ ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:886:57: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  886 |             HAL_UART_Transmit(&huart2, response, strlen(response), UART_DELAY);
+      |                                                         ^~~~~~~~
+      |                                                         |
+      |                                                         uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:24:
+C:\ST\STM32CubeIDE_1.17.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "Final_Project_.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\victo\STM32CubeIDE\workspace_1.17.0\Final_Project\Final_Project_\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final_Project_.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final_Project_.elf
+ 
+arm-none-eabi-size  Final_Project_.elf 
+arm-none-eabi-objdump -h -S Final_Project_.elf  > "Final_Project_.list"
+   text	   data	    bss	    dec	    hex	filename
+  51076	    484	   2524	  54084	   d344	Final_Project_.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final_Project_.list
+ 
+21:37:48 **** Incremental Build of configuration Debug for project Final_Project_ ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:891:57: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  891 |             HAL_UART_Transmit(&huart2, response, strlen(response), UART_DELAY);
+      |                                                         ^~~~~~~~
+      |                                                         |
+      |                                                         uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:24:
+C:\ST\STM32CubeIDE_1.17.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "Final_Project_.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\victo\STM32CubeIDE\workspace_1.17.0\Final_Project\Final_Project_\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final_Project_.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final_Project_.elf
+ 
+arm-none-eabi-size  Final_Project_.elf 
+arm-none-eabi-objdump -h -S Final_Project_.elf  > "Final_Project_.list"
+   text	   data	    bss	    dec	    hex	filename
+  51060	    484	   2516	  54060	   d32c	Final_Project_.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final_Project_.list
+ 
+12:19:55 **** Incremental Build of configuration Debug for project Final_Project_ ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:906:57: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  906 |             HAL_UART_Transmit(&huart2, response, strlen(response), UART_DELAY);
+      |                                                         ^~~~~~~~
+      |                                                         |
+      |                                                         uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:24:
+C:\ST\STM32CubeIDE_1.17.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130\tools\bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "Final_Project_.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\victo\STM32CubeIDE\workspace_1.17.0\Final_Project\Final_Project_\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Final_Project_.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Final_Project_.elf
+ 
+arm-none-eabi-size  Final_Project_.elf 
+arm-none-eabi-objdump -h -S Final_Project_.elf  > "Final_Project_.list"
+   text	   data	    bss	    dec	    hex	filename
+  51060	    484	   2516	  54060	   d32c	Final_Project_.elf
+Finished building: default.size.stdout
+ 
+Finished building: Final_Project_.list
+ 
